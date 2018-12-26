@@ -7,21 +7,32 @@ lambda=x(4);
 mu=x(5);
 
 
+global omega_c; %preset parameters in main
+
+
+
+omega_c=000;
+delta=0.5;
+omega_c_minus=omega_c*(1-delta);
+omega_c_plus=omega_c*(1+delta);
 
 
 
 
-EE=k_d*omega^lambda*sin(pi*lambda/2);
-FF=1+k_d*omega^lambda*cos(pi*lambda/2);
-phi_m=pi+atan(EE/FF)+atan(1/tau/pi);
 
-AA=k_d * omega_c_minus^lambda * sin(pi*lambda) - k_i*omega_c_minus^(-lambda)*sin(pi*lambda/2);
-BB=k_p + k_i*omega_c_minus^(-lambda)*cos(pi*lambda/2)+k_d*omega_c_minus^lambda*cos(pi*lambda/2);
-phi_m_minus= pi + atan(AA/BB) + atan(1/pi*omega_c_minus);
 
-CC=k_d * omega_c_plus^lambda * sin(pi*lambda) - k_i*omega_c_plus^(-lambda)*sin(pi*lambda/2);
-DD=k_p + k_i*omega_c_plus^(-lambda)*cos(pi*lambda/2)+k_d*omega_c_plus^lambda*cos(pi*lambda/2);
-phi_m_plus= pi + atan(CC/DD) + atan(1/pi*omega_c_plus);
+%parallel computing
+EE=k_d*omega_c^mu*sin(pi*mu/2) - k_i*omega_c^(-lambda)*sin(pi*lambda/2);
+FF=k_p + k_i*omega_c^(-lambda)*cos(pi*lambda/2) + k_d*omega_c^mu*cos(pi*mu/2);
+phi_m=pi + atan(EE/FF) + atan(1/omega_c/pi);
+
+AA=k_d * omega_c_minus^mu * sin(pi*mu/2) - k_i*omega_c_minus^(-lambda)*sin(pi*lambda/2);
+BB=k_p + k_i*omega_c_minus^(-lambda)*cos(pi*lambda/2) + k_d*omega_c_minus^mu*cos(pi*mu/2);
+phi_m_minus= pi + atan(AA/BB) + atan(1/(pi*omega_c_minus));
+
+CC=k_d * omega_c_plus^mu * sin(pi*mu/2) - k_i*omega_c_plus^(-lambda)*sin(pi*lambda/2);
+DD=k_p + k_i*omega_c_plus^(-lambda)*cos(pi*lambda/2) + k_d*omega_c_plus^mu*cos(pi*mu/2);
+phi_m_plus= pi + atan(CC/DD) + atan(1/(pi*omega_c_plus));
 
 M=100;
 phi_mr=100;
