@@ -7,11 +7,8 @@ lambda=x(4);
 mu=x(5);
 
 
-global omega_c; %preset parameters in main
+global omega_c phi_mr; %preset parameters in main
 
-
-
-omega_c=000;
 delta=0.5;
 omega_c_minus=omega_c*(1-delta);
 omega_c_plus=omega_c*(1+delta);
@@ -35,7 +32,7 @@ DD=k_p + k_i*omega_c_plus^(-lambda)*cos(pi*lambda/2) + k_d*omega_c_plus^mu*cos(p
 phi_m_plus= pi + atan(CC/DD) + atan(1/(pi*omega_c_plus));
 
 M=100;
-phi_mr=100;
+
 obj = M * abs(phi_mr-phi_m) - phi_m_minus - phi_m_plus;
 end
 
