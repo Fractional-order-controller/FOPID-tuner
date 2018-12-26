@@ -31,8 +31,6 @@ sys_tf=c_tf*p_tf;
 %
 disp('Calculating IOPID open-loop transfer function');
 ioKp = 1.95;ioKi = 0.369;ioKd = 1.48;
-iokp=ioKp;ioki=ioKi;iokd=ioKd;
-
 ioc_tf=ioKp+ioKi/s+ioKd*s;
 p_tf=k/(tau*s+1)/s;
 iosys_tf=ioc_tf*p_tf;
