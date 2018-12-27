@@ -3,7 +3,7 @@ clear;
 
 global omega_c phi_mr;
 omega_c=2;
-phi_mr=100;
+phi_mr=90;
 
 % k_p=x(1);
 % k_i=x(2);
@@ -11,7 +11,7 @@ phi_mr=100;
 % lambda=x(4);
 % mu=x(5);
 ObjectiveFunction = @obj_fun_apm;
-x0 = [2.1654,0.6192,1,0,1]; % start point away from the minimum
+x0 = [2.1654, 0, 2.1654*0.6192, 0, 1.0497]; % start point away from the minimum
 A=[];b=[];Aeq=[];beq=[];
 lb=[-2,0];
 ub=[2,5];
