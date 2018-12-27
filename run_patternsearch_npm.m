@@ -10,11 +10,14 @@ phi_mr=100;
 % k_d=x(3);
 % lambda=x(4);
 % mu=x(5);
-x0 = [0.9694,0.6192,1,0,1]; % start point away from the minimum
+ObjectiveFunction = @obj_fun_apm;
+x0 = [2.1654,0.6192,1,0,1]; % start point away from the minimum
 A=[];b=[];Aeq=[];beq=[];
 lb=[-2,0];
 ub=[2,5];
-x = patternsearch(@obj_fun_apm,x0,A,b,Aeq,beq,lb,ub);
+ConstraintFunction = @simple_constraint;
+x = patternsearch(ObjectiveFunction,x0,A,b,Aeq,beq,lb,ub, ...
+    ConstraintFunction);
 disp('% k_p=x(1); k_i=x(2); k_d=x(3); lambda=x(4); mu=x(5);')
 disp(x);
 
