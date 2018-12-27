@@ -1,7 +1,7 @@
 
 clear;
 
-global omega_c phi_mr;
+global omega_c phi_mr tau k;
 omega_c=2;
 phi_mr=90;
 
