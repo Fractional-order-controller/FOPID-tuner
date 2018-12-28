@@ -31,7 +31,7 @@ CC=k_d * omega_c_plus^mu * sin(pi*mu/2) - k_i*omega_c_plus^(-lambda)*sin(pi*lamb
 DD=k_p + k_i*omega_c_plus^(-lambda)*cos(pi*lambda/2) + k_d*omega_c_plus^mu*cos(pi*mu/2);
 phi_m_plus= pi + atan(CC/DD) + atan(1/(pi*omega_c_plus));
 
-M1=10^1000;
+M1=100;
 
 obj = M1 * abs(phi_mr-phi_m) - phi_m_minus - phi_m_plus;
 end

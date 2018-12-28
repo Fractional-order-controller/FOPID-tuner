@@ -1,23 +1,9 @@
-
-clear;clc;
-
+clc;
 global omega_c phi_mr tau k;
 omega_c=2;
 phi_mr=90;
 
-% k_p=x(1);
-% k_i=x(2);
-% k_d=x(3);
-% lambda=x(4);
-% mu=x(5);
-ObjectiveFunction = @obj_fun_apm;
-x0 = [2.1654, 0, 2.1654*0.6192, 0, 1.0497]; % start point away from the minimum
-A=[];b=[];Aeq=[];beq=[];
-lb=[-2,0];
-ub=[2,5];
-ConstraintFunction = @simple_constraint;
-x = patternsearch(ObjectiveFunction,x0,A,b,Aeq,beq,lb,ub, ...
-    ConstraintFunction);
+x = [2.1654, 0, 2.1654*0.6192, 0, 1.0497]; % start point away from the minimum
 disp('% k_p=x(1); k_i=x(2); k_d=x(3); lambda=x(4); mu=x(5);')
 disp(x);
 disp('obj_fun_apm(x)=');
@@ -25,7 +11,6 @@ disp(obj_fun_apm(x));
 disp('simple_constraint(x)=');
 [c,ceq]=simple_constraint(x);
 fprintf('c=%s,ceq=%s\n',c,ceq);
-
 
 disp('Plotting Bode plot:');
 k_p=x(1); k_i=x(2); k_d=x(3); lambda=x(4); mu=x(5);
@@ -52,4 +37,3 @@ hold on
 bode(iosys_tf);
 lgd=legend('FOPD','IOPID');
 hold off
-
