@@ -1,9 +1,9 @@
 clc;
 global omega_c phi_mr tau k;
-omega_c=2;
-phi_mr=90;
+omega_c=2.51;
+phi_mr=83.9;
 
-x = [2.1654, 0, 2.1654*0.6192, 0, 1.0497]; % start point away from the minimum
+x = [2.6992, 0, 0.6192, 0, 0.9694]; % start point away from the minimum
 % disp('% k_p=x(1); k_i=x(2); k_d=x(3); lambda=x(4); mu=x(5);')
 % disp(x);
 % disp('obj_fun_apm(x)=');
@@ -13,8 +13,8 @@ x = [2.1654, 0, 2.1654*0.6192, 0, 1.0497]; % start point away from the minimum
 
 % disp('ceq=')
 % disp(ceq);
-% disp('Desired phase margin <phi_mr>=');
-% disp(phi_mr);
+disp('Desired phase margin <phi_mr>=');
+disp(phi_mr);
 %% checking inside of obj_fun
 
 
@@ -47,8 +47,8 @@ M1=100;
 obj = M1 * abs(phi_mr-phi_m) - phi_m_minus - phi_m_plus;
 
 
-% disp('<phi_m>= ');
-% disp(phi_m);
+disp('<phi_m>= ');
+disp(phi_m);
 % disp('<phi_m_minus>= ')
 % disp(phi_m_minus);
 % disp('<phi_m_plus>= ')
