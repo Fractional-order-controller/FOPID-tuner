@@ -72,6 +72,10 @@ c_tf=k_p + k_i/s^lambda + k_d*(s^mu);%Test
 p_tf=k/(tau*s+1)/s;
 sys_tf=c_tf*p_tf;
 [Gm,Pm,Wcg,Wcp] = margin(sys_tf)
+
+w=2.51;
+j=sqrt(-1); H1=freqresp(j*w,sys_tf); H1=frd(H1,w);
+[mag,phase,wout]=bode(H1,w)
 %
 % disp('Calculating IOPID open-loop transfer function');
 ioKp = 1.95;ioKi = 0.369;ioKd = 1.48;%dynamic computing in futher
