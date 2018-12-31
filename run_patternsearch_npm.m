@@ -1,4 +1,4 @@
-
+tic
 clear;clc;
 
 global omega_c phi_mr tau k;
@@ -24,7 +24,10 @@ disp('obj_fun_apm(x)=');
 disp(obj_fun_apm(x));
 disp('simple_constraint(x)=');
 [c,ceq]=simple_constraint(x);
-fprintf('c=%s,ceq=%s\n',c,ceq);
+disp('c=');
+disp(c);
+disp('ceq=');
+disp(ceq);
 
 
 disp('Plotting Bode plot:');
@@ -52,4 +55,4 @@ hold on
 bode(iosys_tf);
 lgd=legend('FOPD','IOPID');
 hold off
-
+toc
