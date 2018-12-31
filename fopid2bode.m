@@ -22,8 +22,10 @@ c=2.6992*(1+0.6192*s^0.9694);
 fopd_sys=c*p;
 bode(fopd_sys);
 
-% wc=2.51;
-
+w=2.51;
+j=sqrt(-1); H1=freqresp(j*w,fopd_sys); H1=frd(H1,w);
+[mag,phase,wout]=bode(H1,w)
+phi_m=180-abs(phase)
 
 
 
