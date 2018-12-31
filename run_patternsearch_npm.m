@@ -1,6 +1,6 @@
-tic
-clear;clc;
 
+clear;clc;
+tic
 global omega_c phi_mr tau k;
 omega_c=2.51;
 phi_mr=83.9;
