@@ -14,7 +14,7 @@ ObjectiveFunction = @obj_fun_apm;
 x0 = [2.6992, 0, 2.6992*0.6192, 0, 0.9694]; % start point away from the minimum
 A=[];b=[];Aeq=[];beq=[];
 lb=[2.6,0,0,0,0.5];
-ub=[5,5,5,2,1];
+ub=[5,5,5,2,1.5];
 ConstraintFunction = @simple_constraint;
 x = patternsearch(ObjectiveFunction,x0,A,b,Aeq,beq,lb,ub, ...
     ConstraintFunction);
