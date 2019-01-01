@@ -14,7 +14,6 @@ U_c2=k_d*omega_c^mu*sin(pi*mu/2) - k_i*omega_c^(-lambda)*sin(pi*lambda/2);
 
 
 c=[-k_p; -k_d];
-ceq=sqrt(U_c1^2 + U_c2^2)*k/omega_c/(tau^2*omega_c^2+1)-1;
+ceq=sqrt(U_c1^2 + U_c2^2)*k/omega_c/sqrt(tau^2*omega_c^2+1)-1;
 
 end
-
