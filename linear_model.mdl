@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.12"
+    ComputedModelVersion    "1.13"
     NumModelReferences	    0
     NumTestPointedSignals   2
     TestPointedSignal {
@@ -58,7 +58,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [65.0, 48.0, 990.0, 625.0]
+      Location		      [27.0, 44.0, 990.0, 625.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -118,9 +118,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "standard"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Jan 01 19:44:38 2019"
-  RTWModifiedTimeStamp	  468269377
-  ModelVersionFormat	  "1.%<AutoIncrement:12>"
+  LastModifiedDate	  "Sat Jan 05 18:09:23 2019"
+  RTWModifiedTimeStamp	  468607330
+  ModelVersionFormat	  "1.%<AutoIncrement:13>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -178,7 +178,7 @@ Model {
     $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "linear_model"
-    overrideMode_	    [0U]
+    overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
@@ -1207,7 +1207,7 @@ Model {
   }
   System {
     Name		    "linear_model"
-    Location		    [65, 48, 1055, 673]
+    Location		    [27, 44, 1017, 669]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -1292,7 +1292,7 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"Subsystem"
-	Location		[65, 48, 1055, 673]
+	Location		[27, 44, 1017, 669]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -1554,7 +1554,7 @@ Model {
       Name		      "Sum1"
       SID		      "11"
       Ports		      [2, 1]
-      Position		      [130, 215, 150, 265]
+      Position		      [130, 230, 150, 250]
       ZOrder		      312
       ShowName		      off
       IconShape		      "round"
