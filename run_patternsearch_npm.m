@@ -33,8 +33,8 @@ disp(ceq);
 disp('Plotting Bode plot:');
 k_p=x(1); k_i=x(2); k_d=x(3); lambda=x(4); mu=x(5);
 %k_p depends on k_i, k_d and 
-k = 1.0263;
-tau = 0.71;
+k = 1.02;
+tau = 0.179;
 
 disp('Calculating FOPID open-loop transfer function');
 s=fotf('s');
